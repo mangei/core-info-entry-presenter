@@ -98,7 +98,19 @@ GM_addStyle(`
   object-fit: contain;
 }
 .modal-download {
-  display: none;
+ position: absolute;
+  display: block;
+  color: gray !important;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 5px;
+  font-size: 16pt;
+}
+.modal-download:hover,
+.modal-download:active {
+  color: white !important;
+  text-decoration: none;
 }
 .modal- {
   position: absolute;
@@ -160,6 +172,10 @@ GM_addStyle(`
       removeNode(childNode);
     }
   }
+
+  // Download icon
+  document.getElementsByClassName('modal-download')[0].innerHTML = '🡇';
+  document.getElementsByClassName('modal-download')[0].title = 'Download';
 
   // full width content
   document.getElementsByClassName('span8')[0].className = '';

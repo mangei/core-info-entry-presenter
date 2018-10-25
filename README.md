@@ -19,7 +19,7 @@ Features:
    
 ## Usage
 
- - Enable the user script
- - Open a CORE Info Entry (`/communication/info/info-board/show/*`)
+ - Enable this user script
+ - Open a CORE Info Entry (url ends with: `/communication/info/info-board/show/*`)
  - See the magic ✨
  - After usage, you can disable it again

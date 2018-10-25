@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Core Info Entry Presenter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
 // @match        https://core.catalysts.cc/communication/info/info-board/show/*

@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Core Info Entry Presenter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.4
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
 // @match        https://core.catalysts.cc/communication/info/info-board/show/*
 // @downloadURL  https://github.com/mangei/core-info-entry-presenter/raw/master/core-info-entry-presenter.user.js
 // ==/UserScript==
+
 
 function GM_addStyle(cssStr) {
   let D = document;
@@ -107,12 +108,13 @@ GM_addStyle(`
   color: white;
   padding: 5px;
   font-size: 16pt;
+  text-decoration: none !important;
 }
 .modal-download:hover,
 .modal-download:active {
   color: white !important;
-  text-decoration: none;
 }
+
 .modal- {
   position: absolute;
   display: block;
@@ -175,8 +177,12 @@ GM_addStyle(`
   }
 
   // Download icon
-  document.getElementsByClassName('modal-download')[0].innerHTML = '🡇';
-  document.getElementsByClassName('modal-download')[0].title = 'Download';
+  let downloadNode = document.getElementsByClassName('modal-download')[0];
+  if(downloadNode !== undefined) {
+      downloadNode.innerHTML = '🡇';
+      downloadNode.title = 'Open original image in new tab';
+      downloadNode.target = '_blank';
+  }
 
   // full width content
   document.getElementsByClassName('span8')[0].className = '';
@@ -185,5 +191,8 @@ GM_addStyle(`
   let containerNode = document.getElementsByClassName('container')[0];
   containerNode.className = ''; // remove 'container' class for custom styling
   containerNode.style.padding = '2em'; // some padding
+
+  // fix intend by removing row class
+  document.getElementsByClassName('row')[0].className = '';
 
 })();

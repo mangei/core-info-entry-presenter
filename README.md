@@ -12,6 +12,7 @@ Features:
 ## Installation
 
  - Get Greasemonkey, Tampermonkey or Violentmonkey extension for your browser
+   - Beginners, check out this page: [Userscript Beginners HOWTO](https://github.com/OpenUserJs/OpenUserJS.org/wiki/Userscript-beginners-HOWTO)
  - Install script
    - Open the raw file of the script and the plugin will usually prompt you for installation.
    - [Click here to open raw file](https://github.com/mangei/core-info-entry-presenter/raw/master/core-info-entry-presenter.user.js)

@@ -4,7 +4,7 @@ by [Manuel Geier](https://geier.io)
 
 Features:
 
- - Removes uneccessary distractions
+ - Removes unnecessary distractions
  - Beautifies and improves readability of articles
  - Full Screen Slideshow
  - Adjust content size with Browser Zoom
@@ -22,4 +22,5 @@ Features:
  - Enable this user script
  - Open a CORE Info Entry (url ends with: `/communication/info/info-board/show/*`)
  - See the magic ✨
+  - Use browser zoom to adjust the size
  - After usage, you can disable it again

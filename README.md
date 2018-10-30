@@ -22,5 +22,5 @@ Features:
  - Enable this user script
  - Open a CORE Info Entry (url ends with: `/communication/info/info-board/show/*`)
  - See the magic ✨
-  - Use browser zoom to adjust the size
+   - Use browser zoom to adjust the size
  - After usage, you can disable it again

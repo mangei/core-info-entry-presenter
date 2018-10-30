@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Core Info Entry Presenter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
 // @match        https://core.catalysts.cc/communication/info/info-board/show/*
@@ -114,8 +114,17 @@ GM_addStyle(`
 .modal-download:active {
   color: white !important;
 }
-
-.modal- {
+.modal-gallery-header {
+  position: absolute;
+  display: block;
+  color: white;
+  right: 0;
+  z-index: 1000;
+}
+.modal-gallery-header .close {
+  margin: 5px;
+}
+.modal-title {
   position: absolute;
   display: block;
   max-height: 100px;
@@ -128,17 +137,6 @@ GM_addStyle(`
   text-align: center;
   max-width: unset !important;
 }
-.modal-gallery-header {
-  position: absolute;
-  display: block;
-  color: white;
-  right: 0;
-  z-index: 1000;
-}
-.modal-gallery-header .close {
-  margin: 5px;
-}
-
 .modal-title:not(:empty) {
   padding: 0.5em;
 }
@@ -161,6 +159,7 @@ GM_addStyle(`
   removeNode(document.getElementsByClassName('right-box')[0].parentNode);
   removeNode(document.getElementsByTagName('footer')[0].previousElementSibling); // <hr>
   removeNode(document.getElementsByTagName('footer')[0]);
+  removeNode(document.getElementsByClassName('alert')[0]);
 
   // ///
   // adjust styling

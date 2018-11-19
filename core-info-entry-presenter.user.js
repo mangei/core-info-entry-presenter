@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Core Info Entry Presenter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
 // @match        https://core.catalysts.cc/communication/info/info-board/show/*
@@ -160,6 +160,7 @@ GM_addStyle(`
   removeNode(document.getElementsByTagName('footer')[0].previousElementSibling); // <hr>
   removeNode(document.getElementsByTagName('footer')[0]);
   removeNode(document.getElementsByClassName('alert')[0]);
+  removeNode(document.getElementsByClassName('header')[0].getElementsByTagName('h5')[0]); // "freigegeben von..."
 
   // ///
   // adjust styling

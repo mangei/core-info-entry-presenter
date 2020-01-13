@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Core Info Entry Presenter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.6
+// @version      1.0.7
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
+// @match        https://core.cloudflight.io/communication/info/info-board/show/*
 // @match        https://core.catalysts.cc/communication/info/info-board/show/*
 // @downloadURL  https://github.com/mangei/core-info-entry-presenter/raw/master/core-info-entry-presenter.user.js
 // ==/UserScript==

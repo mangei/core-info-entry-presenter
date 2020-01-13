@@ -5,6 +5,7 @@
 // @description  Adds a presentation mode for CORE info entries.
 // @author       Manuel Geier
 // @match        https://core.cloudflight.io/communication/info/info-board/show/*
+// @match        https://core.catalysts.cc/communication/info/info-board/show/*
 // @downloadURL  https://github.com/mangei/core-info-entry-presenter/raw/master/core-info-entry-presenter.user.js
 // ==/UserScript==
 
